@@ -21,6 +21,7 @@ export default function DonutChart({ total, segments, centerLabel = "Total" }: P
               outerRadius={72}
               paddingAngle={1}
               strokeWidth={0}
+              isAnimationActive={false}
             >
               {segments.map((s) => (
                 <Cell key={s.label} fill={s.color} />

@@ -142,7 +142,7 @@ body {
 
 .widget-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(340px, 100%), 1fr));
   gap: 16px;
 }
 
@@ -463,4 +463,75 @@ body {
 .panel-empty {
   color: var(--muted);
   font-size: 13px;
+}
+
+/* ---------- Responsive (small screens) ---------- */
+@media (max-width: 760px) {
+  .topbar {
+    padding: 0 14px;
+  }
+
+  .topbar-inner {
+    height: auto;
+    min-height: 56px;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 8px 0;
+  }
+
+  .breadcrumbs {
+    font-size: 12px;
+  }
+
+  .search {
+    order: 3;
+    flex-basis: 100%;
+    max-width: none;
+    margin-left: 0;
+  }
+
+  .topbar-actions {
+    margin-left: auto;
+  }
+
+  .content {
+    padding: 16px 14px 36px;
+  }
+
+  .page-title {
+    font-size: 18px;
+  }
+
+  .btn {
+    min-height: 38px;
+  }
+
+  .widget-card {
+    min-height: 0;
+    padding: 14px 14px 16px;
+  }
+
+  .widget-title {
+    font-size: 13px;
+  }
+
+  .add-widget-card {
+    min-height: 120px;
+  }
+
+  .donut-wrap {
+    flex-wrap: wrap;
+  }
+
+  .widget-close {
+    padding: 8px;
+  }
+
+  .panel {
+    width: 100vw;
+  }
+
+  .modal {
+    padding: 16px;
+  }
 }
